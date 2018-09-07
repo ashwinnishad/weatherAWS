@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <form action="/" method="post">
+          <input name="address" type="text" class="ghost-input" placeholder="Enter an Address/Zip-code" required>
+          <input type="submit" class="ghost-button" value="Get Weather">
+        </form>
+      <p>{{weather}}</p>
+      <p>{{error}}</p>
+      </fieldset>
+    </div>
+  </body>
+</html>
