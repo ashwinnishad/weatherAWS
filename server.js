@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
 const apiKey = ''; // Get API key from OpenWeather
+const key = ''; // Get API Key from Google Geocoding API
 const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -14,7 +15,7 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   let address = encodeURIComponent(req.body.address);
-  var geocodeURL = 'http://maps.googleapis.com/maps/api/geocode/json?address=' + address;
+  var geocodeURL = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + address +'&key' + key;
   request({url: geocodeURL,
     json: true
   }, (err, response, body) => {
